@@ -1,7 +1,11 @@
 const fs = require('fs');
 const paths = process.argv.length > 2 ? process.argv.slice(2) : [];
 if(paths.length>0){
-	
+	//define a result hashmap
+	const disconnectionMap = {
+
+	}
+
 	paths.forEach((file)=>{
 		// read csv and convert it to array
 		const content = fs.readFileSync(file,{encoding:'utf8'})
@@ -12,11 +16,6 @@ if(paths.length>0){
 	    content.shift();
 	    let meterId = '';
 	    let currentDate = null;
-
-	    //define a result hashmap
-	    const disconnectionMap = {
-
-	    }
 
 	    //Iterate through each row in csv or in array after csv to array conversion
 	    content.forEach((n)=>{
