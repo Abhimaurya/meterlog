@@ -64,14 +64,14 @@ if(paths.length>0){
 	    	//set current date as new date
 	    	currentDate = newDate;
 	    })
-
-	    //write the result into result.json file 
-	    fs.writeFile('result.json', JSON.stringify(disconnectionMap), function (err) {
-		  if (err) throw err;
-		  console.log('Saved!');
-		});
 	    
 	})
+
+	//write the result into result.json file 
+    fs.writeFile('result.json', JSON.stringify(disconnectionMap), function (err) {
+	  if (err) throw err;
+	  console.log('Saved!');
+	});
 }
 else{
 	console.log('Please provide folder paths');
